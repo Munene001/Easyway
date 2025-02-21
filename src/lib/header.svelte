@@ -24,7 +24,6 @@
 
   let currentIndex = 0;
   let interval: number | undefined;
-  let popOpen = false;
 
   onMount(() => {
     interval = setInterval(() => {
@@ -49,63 +48,42 @@
       },
     };
   }
-
-  function togglePopOpen() {
-    popOpen = !popOpen;
-  }
 </script>
 
-<div class="pagewraper" class:shifted={popOpen} class:no-overflow = {!popOpen}>
-  <Uppernav {popOpen} {togglePopOpen} />
-
-  <div class="slideshow">
-    <Nav />
-    {#key currentIndex}
-      <div
-        class="slide"
-        style="background-image: url({slides[currentIndex].image});"
-        in:flyTransition={{ x: 1000, duration: 3000, easing: quintOut }}
-        out:flyTransition={{ x: -1000, duration: 3000, easing: quintOut }}
-      ></div>
-      <div
-        class="content-wrapper"
-        in:flyTransition={{ x: 1000, duration: 3000, easing: quintOut }}
-        out:flyTransition={{ x: -1000, duration: 3000, easing: quintOut }}
-      >
-        <div class="content">
-          <div class="title">{slides[currentIndex].title}</div>
-          <div class="description">{slides[currentIndex].description}</div>
-          <div class="button-container">
-            {#each slides[currentIndex].buttons as button, i}
-              <a
-                href={button.link}
-                class="button {i === 0 || slides[currentIndex].buttons.length === 1 ? 'primary-button' : 'secondary-button'}"
-              >
-                {button.text}
-              </a>
-            {/each}
-          </div>
+<div class="slideshow">
+  <Uppernav />
+  <Nav />
+  {#key currentIndex}
+    <div
+      class="slide"
+      style="background-image: url({slides[currentIndex].image});"
+      in:flyTransition={{ x: 1000, duration: 500, easing: quintOut }}
+      out:flyTransition={{ x: -1000, duration: 500, easing: quintOut }}
+    ></div>
+    <div
+      class="content-wrapper"
+      in:flyTransition={{ x: 1000, duration: 500, easing: quintOut }}
+      out:flyTransition={{ x: -1000, duration: 500, easing: quintOut }}
+    >
+      <div class="content">
+        <div class="title">{slides[currentIndex].title}</div>
+        <div class="description">{slides[currentIndex].description}</div>
+        <div class="button-container">
+          {#each slides[currentIndex].buttons as button, i}
+            <a
+              href={button.link}
+              class="button {i === 0 || slides[currentIndex].buttons.length === 1 ? 'primary-button' : 'secondary-button'}"
+            >
+              {button.text}
+            </a>
+          {/each}
         </div>
       </div>
-    {/key}
-  </div>
+    </div>
+  {/key}
 </div>
 
 <style>
-  .pagewraper {
-    width: 100%;
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 1; /* Ensure it stays below .pops when shifted */
-  }
-
-  .pagewraper.shifted {
-    transform: translateX(-50%); /* Shift left by half the viewport */
-  }
-  .pagewraper.no-overflow{
-    overflow-x: hidden;
-  }
-
   .slideshow {
     position: relative;
     width: 100%;
@@ -120,6 +98,7 @@
     background-size: cover;
     background-position: center;
     animation: zoomIn 9000ms linear infinite;
+    z-index: 0; /* Below the overlay for tinting */
   }
 
   @keyframes zoomIn {
@@ -220,7 +199,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 255, 0.4);
-    z-index: 1;
+    z-index: 1; /* Above slides for tinting */
     pointer-events: none;
   }
 
@@ -234,7 +213,7 @@
 
   :global(.upper) {
     position: absolute;
-    top: 9%;
+    top: 0;
     width: 100%;
     z-index: 3;
   }

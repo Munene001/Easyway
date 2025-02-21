@@ -2,11 +2,7 @@
     import Icon from "@iconify/svelte";
     import { goto } from "$app/navigation";
   
-    /**
-   * @type {boolean}
-   */
-     export let popOpen;
-    export let togglePopOpen;
+    let popOpen = false;
   
     const links = [
       { label: "Home", url: "/" },
@@ -19,11 +15,15 @@
     ];
   
     /**
-     * @param {string | URL} url
-     */
+   * @param {string | URL} url
+   */
     function Navigate(url) {
       goto(url);
       popOpen = false;
+    }
+  
+    function togglePopOpen() {
+      popOpen = !popOpen;
     }
   </script>
   
@@ -81,31 +81,34 @@
       align-items: center;
       background-color: transparent;
       font-family: "Open Sans", sans-serif;
-      position: relative;
-      
     }
+  
     .upperright {
       display: flex;
       flex-direction: row;
     }
+  
     .item {
       display: flex;
       flex-direction: column;
       margin-left: 30px;
       color: white;
     }
+  
     .itemfirst {
       font-size: 18px;
       font-weight: 700;
       line-height: 18px;
       color: white;
     }
+  
     .itemlast {
       font-size: 16px;
       font-weight: 400;
       color: white;
       line-height: 16px;
     }
+  
     .quote {
       font-size: 14px;
       background-color: rgb(48, 57, 172);
@@ -115,67 +118,100 @@
       padding: 11px;
       border-radius: 4px;
     }
+  
     .upperleft {
       display: flex;
       flex-direction: row;
       align-items: center;
     }
+  
     .upperleft img {
       height: 80px;
       width: 80px;
     }
+  
     .upperleft div {
       font-size: 20px;
       font-weight: 700;
       color: white;
       margin-left: 20px;
     }
+  
     .navpage {
       display: none;
     }
+  
     .pops {
-      display: none;
+      display: none; /* Hidden by default */
     }
+  
     @media (max-width: 768px) {
       .item {
         display: none;
       }
+  
       .upper {
         height: 75px;
         background-color: rgb(17, 35, 73);
         padding: 0 10px;
         box-sizing: border-box;
       }
+  
       .upperleft img {
         height: 30px;
         width: 30px;
       }
+  
       .upperleft div {
         font-size: 12px;
         font-weight: 600;
         color: white;
         margin-left: 10px;
       }
+  
       .navpage {
         display: block;
         background-color: transparent;
       }
+  
       .pops {
-        display: flex;
+        display: flex; /* Ensure this is set to flex or block */
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 0;
-        right: -50%; /* Start off-screen, aligned with the shifted pagewraper */
-        width: 50%;
+        right: 0;
+        width: 100%;
         height: 100vh;
         background-color: black;
         padding: 30px;
         box-sizing: border-box;
         z-index: 1000;
-        transition: right 0.3s ease;
       }
-      .pops:global(.shifted ~ .pops) {
-        right: 0; /* Slide in when pagewraper shifts */
-      }
+    }
+  
+    .pops1 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .button2 {
+      color: white;
+      background: none;
+      border: none;
+      font-size: 18px;
+      text-align: left;
+      cursor: pointer;
+    }
+  
+    .button3 {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
     }
   </style>
