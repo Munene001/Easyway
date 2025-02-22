@@ -42,7 +42,7 @@
         <div class="itemlast">Behind Garden City Mall</div>
       </div>
       <div class="item">
-        <div class="itemfirst">Trusted by</div>
+        <div class="itemfirst">Trusted by 137+ </div>
         <div class="itemlast">Customers</div>
       </div>
       <div class="item">
@@ -50,8 +50,8 @@
       </div>
     </div>
     <div class="navpage">
-      <button on:click={togglePopOpen}>
-        <Icon icon="material-symbols:menu-rounded" />
+      <button on:click={togglePopOpen} class="buttonuno">
+        <Icon icon="material-symbols:menu-rounded" color= "white" font-size = 35px />
       </button>
     </div>
     {#if popOpen}
@@ -173,6 +173,11 @@
         display: block;
         background-color: transparent;
       }
+      .buttonuno{
+        background-color: transparent;
+        border: none;
+      }
+      
   
       .pops {
         display: flex; /* Ensure this is set to flex or block */
@@ -182,7 +187,7 @@
         right: 0;
         width: 100%;
         height: 100vh;
-        background-color: black;
+        background-color: rgb(31,31,31);
         padding: 30px;
         box-sizing: border-box;
         z-index: 1000;
@@ -190,24 +195,32 @@
     }
   
     .pops1 {
+      margin-top: 50px;
       display: flex;
       flex-direction: column;
       gap: 20px;
+      padding: 0px 35px;
+      box-sizing: border-box;
     }
   
     .button2 {
       color: white;
       background: none;
       border: none;
-      font-size: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
+      font-size: 20px;
       text-align: left;
       cursor: pointer;
+      padding-bottom: 20px;
+    }
+    .button2:hover{
+       border: 1px solid blue;
     }
   
     .button3 {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 20px;
+      right: 15px;
       background: none;
       border: none;
       color: white;

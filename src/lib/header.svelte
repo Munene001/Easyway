@@ -18,7 +18,7 @@
       image: "/optimized/moneystack.webp",
       title: "Financial Solution",
       description: "Credit only microfinance based in Nairobi",
-      buttons: [{ text: "Contact us", link: "/sky-page" }],
+      buttons: [{ text: "Contact us", link: "/sky-page" },{ text: "Learn More", link: "/sky-page" },],
     },
   ];
 
@@ -202,6 +202,17 @@
     z-index: 1; /* Above slides for tinting */
     pointer-events: none;
   }
+  .slideshow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 208px; /* Matches the height of .upper on desktop */
+    background-color: rgba(0, 0, 139, 0.5); /* Darker blue tint with transparency */
+    z-index: 2; /* Below .upper (z-index: 3) but above slides (z-index: 0) */
+    pointer-events: none;
+  }
 
   :global(.pageroute) {
     position: absolute;
@@ -221,6 +232,9 @@
   @media (max-width: 768px) {
     .slideshow {
       height: 360px;
+    }
+    .slideshow::before{
+      display: none;
     }
 
     .content-wrapper {
