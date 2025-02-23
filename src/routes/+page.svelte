@@ -2,6 +2,9 @@
     import Headerlite from "$lib/headerlite.svelte";
     import Header from "$lib/header.svelte";
     import Services from "$lib/services.svelte";
+    import About from "$lib/about.svelte";
+  import Stats from "$lib/stats.svelte";
+    
     
    
     </script>
@@ -19,6 +22,10 @@
     <Services src = "/stock-investment.png" title ="Other Services" description = "We have working capital and asset finance that support all types of businesses." />
     
     </div>
+    
+    <About/>
+    <Stats/>
+    
     <style>
         .products{
             width: 100%;

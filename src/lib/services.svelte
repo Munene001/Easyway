@@ -77,6 +77,7 @@
             background-color: blue;
             color: white;
             border: none;
+            font-weight: 600;
         }
         .Apply:hover{
             background-color: gray;
