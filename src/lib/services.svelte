@@ -1,8 +1,11 @@
 <script>
+  import { goto } from "$app/navigation";
+
     export let src = "/business.png";
     export let title = "Business loans";
     export let description = "Business loan is a business credit facility that allows a business to borrow against its future sales.";
     export let Turnaround = "";
+    
     
     </script>
     <div class=" service">
@@ -13,7 +16,7 @@
             {#if Turnaround}
             <div class="turnaround"> Turn around Time:{Turnaround}</div>
             {/if}
-            <div class="divapply"><button class=" Apply">Apply Now</button></div>
+            <div class="divapply"><button class=" Apply"><a href="/contact">Apply Now</a></button></div>
         </div>
         
     </div>
@@ -75,9 +78,14 @@
             font-size: 15px;
             padding: 10px;
             background-color: blue;
-            color: white;
             border: none;
+            
+        }
+        .Apply a{
+            color: white;
+            text-decoration: none;
             font-weight: 600;
+
         }
         .Apply:hover{
             background-color: gray;

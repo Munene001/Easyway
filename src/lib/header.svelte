@@ -10,7 +10,7 @@
       title: "Easyway Credit",
       description: "Credit only microfinance based in Nairobi",
       buttons: [
-        { text: "Contact us", link: "/sky-page" },
+        { text: "Contact us", link: "/contact" },
         { text: "Learn More", link: "/sky-page" },
       ],
     },
@@ -18,7 +18,7 @@
       image: "/optimized/moneystack.webp",
       title: "Financial Solution",
       description: "Credit only microfinance based in Nairobi",
-      buttons: [{ text: "Contact us", link: "/sky-page" },{ text: "Learn More", link: "/sky-page" },],
+      buttons: [{ text: "Contact us", link: "/contact" },{ text: "Learn More", link: "/sky-page" },],
     },
   ];
 

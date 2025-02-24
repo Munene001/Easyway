@@ -46,7 +46,7 @@
         <div class="itemlast">Customers</div>
       </div>
       <div class="item">
-        <button class="quote">GET A QUOTE</button>
+        <button class="quote"><a href="/contact">GET A QUOTE</a></button>
       </div>
     </div>
     <div class="navpage">
@@ -110,13 +110,19 @@
     }
   
     .quote {
-      font-size: 14px;
+      
       background-color: rgb(48, 57, 172);
       color: white;
       font-weight: 600;
       border: 1px solid rgb(48, 57, 172);
       padding: 11px;
       border-radius: 4px;
+    }
+    .quote a{
+      font-size: 14px;
+      color: white;
+      text-decoration: none;
+
     }
   
     .upperleft {

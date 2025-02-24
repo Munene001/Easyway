@@ -112,7 +112,7 @@
     }
 
     .numbers {
-        height: 150px;
+        height: 200px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
