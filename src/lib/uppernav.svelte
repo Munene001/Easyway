@@ -5,13 +5,12 @@
     let popOpen = false;
   
     const links = [
-      { label: "Home", url: "/" },
-      { label: "Shop", url: "/shop" },
-      { label: "Men", url: "/men" },
-      { label: "Women", url: "/women" },
-      { label: "Checkout", url: "/checkout" },
-      { label: "About", url: "/about" },
-      { label: "Contact", url: "/contact" },
+      { label: "HOME", url: "/" },
+      { label: "ABOUT", url: "/shop" },
+      { label: "CAREERS", url: "/men" },
+      { label: "SERVICES", url: "/women" },
+      { label: "NEWS", url: "/about" },
+      { label: "CONTACT", url: "/contact" },
     ];
   
     /**

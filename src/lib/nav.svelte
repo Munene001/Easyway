@@ -4,17 +4,14 @@
 <div class="pageroute">
   <div class="routeitem"><a href="/" aria-label="Go to home"> HOME </a></div>
   <div class="routeitem">
-    <a href="/shop" aria-label="Go to shop"> SHOP </a>
+    <a href="/about" aria-label="Go to shop"> ABOUT </a>
   </div>
-  <div class="routeitem"><a href="/men" aria-label="Go to MEN"> WOMEN </a></div>
+  <div class="routeitem"><a href="/men" aria-label="Go to career"> CAREERS </a></div>
   <div class="routeitem">
-    <a href="/women" aria-label="Go to WOMEN"> WOMEN </a>
-  </div>
-  <div class="routeitem">
-    <a href="/checkout" aria-label="Go to checkout"> CHECKOUT </a>
+    <a href="/women" aria-label="Go to services"> SERVICES </a>
   </div>
   <div class="routeitem">
-    <a href="/about" aria-label="Go to about"> ABOUT </a>
+    <a href="/checkout" aria-label="Go to checkout"> NEWS </a>
   </div>
   <div class="routeitem">
     <a href="/contact" aria-label="Go to contact"> CONTACT </a>

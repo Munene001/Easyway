@@ -7,7 +7,7 @@
     
   
     // Props to make it reusable
-    export let image = "/optimized/sky.webp";
+    export let image = "/optimized/coins.webp";
     export let title = "Contact Us";
     export let description = "Get in touch";
    
@@ -98,9 +98,9 @@
   
     .description {
       font-family: "Open Sans", sans-serif;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 400;
-      line-height: 32px;
+      line-height: 36px;
       color: rgb(255, 255, 255);
       max-width: 500px;
       margin-left: 10px;

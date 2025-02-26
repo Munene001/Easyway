@@ -8,7 +8,7 @@
     {
       image: "/optimized/sky.webp",
       title: "Easyway Credit",
-      description: "Credit only microfinance based in Nairobi",
+      description: "We are a Nairobi-based microfinance offering loans like logbook and salary advances for businesses.",
       buttons: [
         { text: "Contact us", link: "/contact" },
         { text: "Learn More", link: "/sky-page" },
@@ -17,7 +17,7 @@
     {
       image: "/optimized/moneystack.webp",
       title: "Financial Solution",
-      description: "Credit only microfinance based in Nairobi",
+      description: "Our tailored financial solutions empower Nairobi’s entrepreneurs with quick approvals and flexible plans to thrive.",
       buttons: [{ text: "Contact us", link: "/contact" },{ text: "Learn More", link: "/sky-page" },],
     },
   ];
@@ -127,7 +127,7 @@
 
   .content {
     position: relative;
-    top: 48%;
+    top: 42%;
     left: 3%;
     color: white;
     display: flex;
@@ -219,7 +219,7 @@
     top: 19%;
     left: 3%;
     width: 100%;
-    z-index: 3;
+    z-index: 4;
   }
 
   :global(.upper) {

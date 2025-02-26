@@ -11,7 +11,7 @@
           height="19"
           color="rgb(55, 64, 176)"
         />
-        <p>Mon - Sat 9:00 - 18:00</p>
+        <p>Mon - Fri 8:00 - 17:00</p>
       </div>
       <div class="unonext">
         <Icon
