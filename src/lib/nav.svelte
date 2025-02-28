@@ -4,14 +4,19 @@
 <div class="pageroute">
   <div class="routeitem"><a href="/" aria-label="Go to home"> HOME </a></div>
   <div class="routeitem">
-    <a href="/about" aria-label="Go to shop"> ABOUT </a>
-  </div>
-  <div class="routeitem"><a href="/men" aria-label="Go to career"> CAREERS </a></div>
-  <div class="routeitem">
-    <a href="/women" aria-label="Go to services"> SERVICES </a>
+    <a href="/#about-section" aria-label="Go to shop"> ABOUT </a>
   </div>
   <div class="routeitem">
-    <a href="/checkout" aria-label="Go to checkout"> NEWS </a>
+    <a href="/history" aria-label="Go to history"> HISTORY </a>
+  </div>
+  <div class="routeitem">
+    <a href="/careers" aria-label="Go to career"> CAREERS </a>
+  </div>
+  <div class="routeitem">
+    <a href="/#service-section" aria-label="Go to services"> SERVICES </a>
+  </div>
+  <div class="routeitem">
+    <a href="/news" aria-label="Go to checkout"> NEWS </a>
   </div>
   <div class="routeitem">
     <a href="/contact" aria-label="Go to contact"> CONTACT </a>
@@ -40,8 +45,8 @@
   .routeitem a:hover {
     color: rgb(255, 255, 255); /* Fully opaque white on hover */
   }
-  @media (max-width:768px){
-    .pageroute{
+  @media (max-width: 768px) {
+    .pageroute {
       display: none;
     }
   }

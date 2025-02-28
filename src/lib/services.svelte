@@ -8,7 +8,7 @@
     
     
     </script>
-    <div class=" service">
+    <div class="service" style="scroll-behaviour:smooth">
         <div class="service-left"><img src={src} alt = {title}/></div>
         <div class = service-right>
             <div class="title">{title}</div>

@@ -11,8 +11,8 @@
 <Headerlite />
 
 <Header />
-<div class="prodtitle">Our Products</div>
-<div class="products">
+<div class="prodtitle" id="service-section">Our Products</div>
+<div class="products" >
   <Services Turnaround=" Under 6 hours" />
   <Services
     src="/car-loan.png"
@@ -34,7 +34,7 @@
   />
 </div>
 
-<About />
+<About/>
 <Stats />
 <div class="holdertitle">Our Core Values</div>
 <div class="holder">

@@ -6,9 +6,9 @@
   
     const links = [
       { label: "HOME", url: "/" },
-      { label: "ABOUT", url: "/shop" },
+      { label: "ABOUT", url: "/#about-section" },
       { label: "CAREERS", url: "/men" },
-      { label: "SERVICES", url: "/women" },
+      { label: "SERVICES", url: "/#service-section" },
       { label: "NEWS", url: "/about" },
       { label: "CONTACT", url: "/contact" },
     ];

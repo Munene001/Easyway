@@ -1,8 +1,19 @@
 <script>
   import Icon from "@iconify/svelte";
+  import ContactForm from "./contactform.svelte"; // Adjust path as needed
 </script>
 
 <div class="Reachus">
+  <div class="input">
+    <div class="commence">
+      <div class="comm">Leave us your info</div>
+      <div class="ence">and we will get back to you</div>
+      <div class="ic"><Icon icon="garden:dash-stroke-16" /></div>
+    </div>
+    <div class="form">
+      <ContactForm />
+    </div>
+  </div>
   <div class="details">
     <div class="detail">
       <div class="symbol"><Icon icon="ic:baseline-phone" /></div>
@@ -30,28 +41,16 @@
       <div class="symbol"><Icon icon="tabler:location" /></div>
       <div class="title">Location</div>
       <div class="description">
-        Trio complex Thike road behind Garden city mall. P.O BOX 10499-00400 <br
-        /> Nairobi
+        Trio complex Thika road behind Garden city mall. P.O BOX 10499-00400 <br />
+        Nairobi
       </div>
-      <div class="detailitem"><a href="https://www.google.com/maps/place/The+Trio+Complex/@-1.2357771,36.873923,1479m/data=!3m1!1e3!4m6!3m5!1s0x182f155f3c9e2241:0xe63a84bd70d17c93!8m2!3d-1.2355713!4d36.8765036!16s%2Fg%2F11qzj83shg!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D"> View Location on Map</a></div>
-    </div>
-  </div>
-  <div class="input">
-    <div class="commence">
-      <div class="comm">Leave us your info</div>
-      <div class="ence">and we will get back to you</div>
-      <div class="ic"><Icon icon="garden:dash-stroke-16" /></div>
-    </div>
-    <div class="form">
-      <form>
-        <div class="namer">
-          <input type="text" placeholder="Firstname" class="firstname"/>
-          <input type="text" placeholder="Lastname"  class="lastname"/>
-        </div>
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Message" rows="10" cols="10"></textarea>
-        <button type="submit">Submit Now</button>
-      </form>
+      <div class="detailitem">
+        <a
+          href="https://www.google.com/maps/place/The+Trio+Complex/@-1.2357771,36.873923,1479m/data=!3m1!1e3!4m6!3m5!1s0x182f155f3c9e2241:0xe63a84bd70d17c93!8m2!3d-1.2355713!4d36.8765036!16s%2Fg%2F11qzj83shg!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D"
+        >
+          View Location on Map
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -67,13 +66,12 @@
   ></iframe>
 </div>
 <div>
-    <div class="socialmediaitems">
-        <div class="socialitem"><Icon icon="ic:outline-facebook" /></div>
-        <div class="socialitem"><Icon icon="garden:twitter-fill-12" /></div>
-        <div class="socialitem"><Icon icon="ri:instagram-fill" /></div>
-        <div class="socialitem"><Icon icon="uil:linkedin" /></div>
-      </div>
-
+  <div class="socialmediaitems">
+    <div class="socialitem"><Icon icon="ic:outline-facebook" /></div>
+    <div class="socialitem"><Icon icon="garden:twitter-fill-12" /></div>
+    <div class="socialitem"><Icon icon="ri:instagram-fill" /></div>
+    <div class="socialitem"><Icon icon="uil:linkedin" /></div>
+  </div>
 </div>
 
 <style>
@@ -91,6 +89,7 @@
     padding-bottom: 45px;
     box-sizing: border-box;
     gap: 20px;
+    background-color: rgb(231, 224, 224);
   }
   .detail {
     display: flex;
@@ -109,7 +108,7 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 27.2px;
-    color: rgb(102, 99, 99);
+    color: black;
   }
   .detailitem {
     font-size: 16px;
@@ -144,115 +143,45 @@
   .input {
     display: flex;
     flex-direction: column;
-    background-color:rgb(231, 224, 224);
     align-items: center;
     padding: 50px 0px;
     box-sizing: border-box;
     gap: 5px;
   }
-  .form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 720px;
-  }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  textarea:focus {
-    border: 2px solid rgb(55, 64, 176);
-    outline: none;
-  }
-
-  .form form input {
-    height: 62px;
-    padding: 5px 10px;
-    font-size: 17px;
-    background-color: white;
-    border: none;
-  }
-
-  .form form textarea {
-    font-size: 17px;
-    padding: 15px 10px;
-    background-color: white;
-    border: none;
-  }
-  .form form textarea:focus {
-    border: 2px solid rgb(55, 64, 176);
-  }
-
-  .namer {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    width: 100%;
-  }
-  .namer input {
-    width: 100%;
-  }
-  .form button {
-    background-color: rgb(55, 64, 176);
-    height: 62px;
-    color: white;
-    border: none;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 30px;
-  }
-  .form ::placeholder {
-    font-size: 17px;
-    color: rgb(66, 63, 63);
-  }
-  .socialmediaitems{
+  .socialmediaitems {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 60px;
     padding: 50px 0px;
-
   }
-  .socialitem{
+  .socialitem {
     color: black;
     font-size: 30px;
-
-
   }
-  @media(max-width:768px){
-    .input{
-        width: 100%;
-        padding: 50px 0px;
+  @media (max-width: 768px) {
+    .input {
+      width: 100%;
+      padding: 50px 0px;
     }
-    .details{
-        display: flex;
-        flex-direction: column;
-        gap:70px;
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
     }
-    
-    .form form{
-        width: 100%;
-        gap: 39px;
-        padding: 0px 20px;
-        box-sizing: border-box;
+    .comm {
+      font-size: 32px;
+      line-height: 40px;
     }
-    .comm{
-        font-size: 32px;
-        line-height: 40px;
+    .location iframe {
+      height: 550px;
     }
-    .location iframe{
-        height: 550px;
-        
+    .socialmediaitems {
+      gap: 20px;
+      padding: 20px 0px;
     }
-    .socialmediaitems{
-        gap:20px;
-        padding: 20px 0px;
+    .socialitem {
+      font-size: 24px;
     }
-    .socialitem{
-        font-size: 24px;
-        
-    }
-   
-
-    
-   
   }
 </style>

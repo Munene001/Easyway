@@ -2,7 +2,7 @@
     import Icon from "@iconify/svelte";
 </script>
 
-<div class="About">
+<div class="About" id="about-section" style="scroll-behavior: smooth;">
   <div class="abouttop">
     <div class="abuno"><img src="./optimized/sky2.webp" alt="sky2"/></div>
     <div class="abright">
