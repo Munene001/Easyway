@@ -4,6 +4,9 @@
   import Headerlite from "$lib/headerlite.svelte";
   import { onMount } from "svelte";
 
+  /**
+   * @type {string | any[]}
+   */
   let careers = [];
   let error = "";
   let loading = true;
@@ -19,7 +22,7 @@
       }
       careers = await response.json();
     } catch (err) {
-      error = err.message || "Network issue";
+      error = "Network issue";
       console.error(error);
     } finally {
       loading = false;
@@ -31,6 +34,9 @@
   });
 
   // Optional: Format timestamp to readable date
+  /**
+   * @param {string | number | Date} timestamp
+   */
   function formatDate(timestamp) {
     return new Date(timestamp).toLocaleDateString("en-US", {
       year: "numeric",
@@ -39,6 +45,9 @@
     });
    
   }
+  /**
+   * @param {string} text
+   */
   function splitIntoList(text) {
     if (!text) return [];
     return text.split("\n").filter(item => item.trim().length > 0);
@@ -46,7 +55,7 @@
 </script>
 
 <Headerlite />
-<Frame title="Careers" />
+<Frame title="Careers" image = "/careermiss.jpg" description = "Join Easyway and be part of a team driven by innovation, growth, and excellence."/>
 <div class="career">
 {#if loading}
   <div class="Loading">Loading careers...</div>

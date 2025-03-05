@@ -6,7 +6,7 @@
 
   let slides = [
     {
-      image: "/optimized/sky.webp",
+      image: "/nai2.jpg",
       title: "Easyway Credit",
       description: "We are a Nairobi-based microfinance offering loans like logbook and salary advances for businesses.",
       buttons: [
@@ -15,7 +15,7 @@
       ],
     },
     {
-      image: "/optimized/moneystack.webp",
+      image: "/coinsx.jpg",
       title: "Financial Solution",
       description: "Our tailored financial solutions empower Nairobi’s entrepreneurs with quick approvals and flexible plans to thrive.",
       buttons: [{ text: "Contact us", link: "/contact" },{ text: "Learn More", link: "/sky-page" },],
@@ -214,7 +214,7 @@
     pointer-events: none;
   }
 
-  :global(.pageroute) {
+  .slideshow :global(.pageroute) {
     position: absolute;
     top: 19%;
     left: 3%;
@@ -255,7 +255,7 @@
     }
 
     .title {
-      font-size: 40px;
+      font-size: 35px;
       font-weight: 700;
     }
 

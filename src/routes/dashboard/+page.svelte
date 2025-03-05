@@ -80,7 +80,7 @@
   .dashboard {
     display: flex;
     flex-direction: column;
-    padding: 0px 15px;
+    padding-left: 15px;
     box-sizing: border-box;
   }
   .feedback {
@@ -89,6 +89,7 @@
     font-size: 18px;
     line-height: 32px;
     font-weight: 700;
+    margin-top: 10px;
   }
   table {
     width: 80%;
@@ -102,11 +103,18 @@
     padding: 8px;
   }
   .download {
-    background-color: transparent;
-    margin-top: 20px;
+    background-color: rgb(55, 64, 176);
+    color: white;
+    border: none;
+    width: 180px;
+    font-size: 16px;
+    font-weight: 500;
+
+    line-height: 30px;
+    margin-bottom: 5px;
   }
   .download a {
     text-decoration: none;
-    color: blue;
+    color: white;
   }
 </style>

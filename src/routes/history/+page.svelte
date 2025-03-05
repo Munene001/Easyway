@@ -7,8 +7,8 @@
 </script>
 
 <Headerlite />
-<Frame title="History" description="Learn our Origin" />
-
+<Frame title="History" description="Easyway has grown from humble beginnings to a trusted name, committed to innovation and customer satisfaction." image = "/history.jpg"/>
+ 
 <div class="History">
   <p>
     Easyways credit was incorporated in Kenya 4th December 2023 as a credit only
@@ -87,5 +87,26 @@
     padding-top: 30px;
     color: rgb(122, 122, 122);
     
+  }
+  @media(max-width:768px){
+    .History{
+      padding: 10px 23px;
+      
+      display: block;
+      
+    }
+    .products {
+      display: flx;
+      flex-direction: column;
+      padding: 0px 23px;
+      padding-bottom: 80px;
+      padding-top: 10px;
+      gap: 70px;
+    }
+    .prodtitle {
+      color: rgb(122, 122, 122);
+      margin-top: 0px;
+      font-size: 22px;
+    }
   }
 </style>

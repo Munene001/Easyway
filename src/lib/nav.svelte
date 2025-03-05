@@ -16,9 +16,6 @@
     <a href="/#service-section" aria-label="Go to services"> SERVICES </a>
   </div>
   <div class="routeitem">
-    <a href="/news" aria-label="Go to checkout"> NEWS </a>
-  </div>
-  <div class="routeitem">
     <a href="/contact" aria-label="Go to contact"> CONTACT </a>
   </div>
 </div>

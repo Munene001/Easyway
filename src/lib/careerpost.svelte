@@ -269,5 +269,18 @@
     font-weight: 500;
 
     line-height: 30px;
+
+  }
+  @media (max-width:768px){
+    .detailsblock{
+      display: flex;
+      flex-direction: column;
+    }
+    .details textarea{
+      width: 300px;
+    }
+    .detailsblock{
+      padding: 0px 0px;
+    }
   }
 </style>

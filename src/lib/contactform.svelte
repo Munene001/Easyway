@@ -190,7 +190,7 @@
   }
   ::placeholder {
     font-size: 17px;
-    color: rgb(110, 110, 241);
+    color: rgb(35, 35, 235);
   }
   .error {
     color: red;

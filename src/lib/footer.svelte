@@ -41,10 +41,10 @@
     <div class="links">
       <div class="linkstitle">Useful links</div>
       <div class="linkitems">
-        <div class="linkitem"><a href="/about">About</a></div>
-        <div class="linkitem"><a href="/about">Career</a></div>
+        <div class="linkitem"><a href="/dashboard">Dashboard</a></div>
+        <div class="linkitem"><a href="/careers">Career</a></div>
         <div class="linkitem"><a href="/about">Branches</a></div>
-        <div class="linkitem"><a href="/about">News</a></div>
+        <div class="linkitem"><a href="/history">History</a></div>
         <div class="linkitem"><a href="/contact">Contact Us</a></div>
       </div>
     </div>

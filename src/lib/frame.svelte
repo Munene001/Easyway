@@ -21,7 +21,7 @@
   
   
   
-  <div class="slideshow">
+  <div class="slideshows">
     <Uppernav />
     <Nav />
     <div class="slide" style="background-image: url({image});"></div>
@@ -36,7 +36,7 @@
   
   
   <style>
-    .slideshow {
+    .slideshows {
       position: relative;
       width: 100%;
       height: 600px;
@@ -107,7 +107,7 @@
     }
   
     
-    .slideshow::after {
+    .slideshows::after {
       content: "";
       position: absolute;
       top: 0;
@@ -119,7 +119,7 @@
       pointer-events: none;
     }
   
-    .slideshow::before {
+    .slideshows::before {
       content: "";
       position: absolute;
       top: 0;
@@ -131,7 +131,7 @@
       pointer-events: none;
     }
   
-    :global(.pageroute) {
+     :global(.pageroute) {
       position: absolute;
       top: 25%;
       left: 3%;
@@ -147,10 +147,10 @@
     }
   
     @media (max-width: 768px) {
-      .slideshow {
+      .slideshows {
         height: 360px;
       }
-      .slideshow::before {
+      .slideshows::before {
         display: none;
       }
   
@@ -177,8 +177,8 @@
       }
   
       .description {
-        font-size: 16px;
-        line-height: 27.2px;
+        font-size: 14px;
+        line-height: 22.2px;
         max-width: 100%;
         margin-left: 0;
       }
