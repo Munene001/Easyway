@@ -98,7 +98,7 @@
       <label>
         <input
           type="radio"
-          name="job_location"
+          name="employment_type"
           value="parttime"
           bind:group={employment_type}
           required
@@ -107,7 +107,7 @@
       <label>
         <input
           type="radio"
-          name="job_location"
+          name="employment_type"
           value="internship"
           bind:group={employment_type}
           required
@@ -118,7 +118,7 @@
       <label>
         <input
           type="radio"
-          name="employment_type"
+          name="experience_level"
           value="entry_level"
           bind:group={experience_level}
           required
@@ -127,7 +127,7 @@
       <label>
         <input
           type="radio"
-          name="job_location"
+          name="experience_level"
           value="mid_level"
           bind:group={experience_level}
           required
@@ -136,7 +136,7 @@
       <label>
         <input
           type="radio"
-          name="job_location"
+          name="experience_level"
           value="senior"
           bind:group={experience_level}
           required
@@ -176,7 +176,7 @@
       </div>
     </div>
     <div>
-      <label for="Email">Submit your Email and CV here:</label>
+      <label for="Email">Email where they submit CV and cover letter:</label>
       <input type="text" placeholder="" bind:value={email} required />
     </div>
     <div>
@@ -281,6 +281,9 @@
     }
     .detailsblock{
       padding: 0px 0px;
+    }
+    form{
+      gap: 20px;
     }
   }
 </style>

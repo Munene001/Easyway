@@ -3,6 +3,7 @@
 
   import Careerpost from "$lib/careerpost.svelte";
   import Destroy from "$lib/destroy.svelte";
+  import Newspost from "$lib/newspost.svelte";
 
   /**
    * @type {string | any[]}
@@ -30,6 +31,7 @@
 <div class="dashboard">
   <Careerpost />
   <Destroy/>
+  <Newspost/>
 
   <div class="feedback">FEEDBACK</div>
   <div>

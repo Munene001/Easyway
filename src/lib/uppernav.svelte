@@ -10,6 +10,7 @@
       { label: "HISTORY", url: "/history" },
       { label: "CAREERS", url: "/careers" },
       { label: "SERVICES", url: "/#service-section" },
+      { label: "NEWS", url: "/news" },
       { label: "CONTACT", url: "/contact" },
     ];
   
