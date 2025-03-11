@@ -5,9 +5,6 @@
   import { onMount } from "svelte";
   import Icon from "@iconify/svelte";
   import { goto } from "$app/navigation";
-
-  
-
   
 
   /**
@@ -17,25 +14,25 @@
   let error = "";
   let loading = true;
 
-  export let news = [
-    id:""
-  ]
   
 
-
-  function openBlogpage(){
-    if(news.news_id){
-        console.error{"news id is missing"}
-        return;
+  /**
+   * @param {any} id
+   */
+   function openBlogpage(id) {
+    if (!id) {
+      console.error("news id is missing");
+      return;
     }
-    goto('/blog/'${news.id})
+    goto(`/blog/${id}`); // Use backticks for interpolation
+    console.log("passed the id", id);
   }
 
   async function fetchNews() {
     try {
       const response = await fetch("http://127.0.0.1:8000/api/news", {
         method: "GET",
-        headers: { Accept: "application/josn" },
+        headers: { Accept: "application/json" },
       });
       if (!response.ok) {
         throw new Error("failed to fecth News");
@@ -93,14 +90,12 @@
             </div>
           </div>
           <div class="paragraph"><p>{news.snippet}</p></div>
-          <button class = "Read">Read More</button>
+          <button class="Read" onclick={() => openBlogpage(news.id)}>Read More</button>
         </div>
       {/each}
     {/if}
   </div>
-  <div class="right">
-    
-  </div>
+  <div class="right"></div>
 </div>
 <Footer />
 
@@ -157,7 +152,7 @@
     line-height: 27.2px;
     color: rgb(75, 80, 145);
   }
-  .Read{
+  .Read {
     background-color: rgb(55, 64, 176);
     font-size: 16px;
     width: 130px;
@@ -165,6 +160,5 @@
     padding: 17px;
     border: none;
     font-weight: 700;
-
   }
 </style>
