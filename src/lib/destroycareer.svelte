@@ -7,6 +7,7 @@
   let careers = [];
   let error = "";
   let loading = true;
+  let successMessage = ""
 
   async function fetchCareers() {
     try {
@@ -39,6 +40,7 @@
         throw new Error("Failed to delete career");
       }
       console.log(`Career ${id} deleted from database. Refresh to see changes`);
+      successMessage = `Career ${id} deleted successfully.Refresh to see changes`;
     } catch (err) {
       error = "Error deleting career";
       console.error("Delete error:", err);
@@ -72,7 +74,7 @@
   {:else}
     <div class="minititle">JOBS POSTED</div>
     {#each careers as career}
-      <div class="career-card">
+      <div class="news-card">
         <div><strong>Posted:</strong> {formatDate(career.date)}</div>
         <div><strong>Job Title:</strong> {career.job_title}</div>
         <div><strong>Apply By:</strong> {formatDate(career.deadline)}</div>
@@ -80,6 +82,9 @@
           >Delete</button
         >
       </div>
+      {#if successMessage}
+      <div class="success-message">{successMessage}</div> <!-- Display success message -->
+    {/if}
     {/each}
   {/if}
 </div>
@@ -117,7 +122,7 @@
     font-weight: 600;
     line-height: 27px;
   }
-  .career-card {
+  .news-card {
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
@@ -128,10 +133,16 @@
     gap: 6px;
     box-sizing: border-box;
   }
-  .career-card div {
+  .news-card div {
     margin-bottom: 5px;
   }
-  .career-card strong {
+  .news-card strong {
     color: #333;
+  }
+  .success-message {
+    color: green;
+    font-size: 18px;
+    margin-top: 0px;
+    align-self: center;
   }
 </style>

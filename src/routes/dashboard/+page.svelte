@@ -2,8 +2,9 @@
   import { onMount } from "svelte";
 
   import Careerpost from "$lib/careerpost.svelte";
-  import Destroy from "$lib/destroy.svelte";
+  import Destroycareer from "$lib/destroycareer.svelte";
   import Newspost from "$lib/newspost.svelte";
+  import Destroynews from "$lib/destroynews.svelte";
 
   /**
    * @type {string | any[]}
@@ -30,8 +31,9 @@
 
 <div class="dashboard">
   <Careerpost />
-  <Destroy/>
+  <Destroycareer/>
   <Newspost/>
+  <Destroynews/>
 
   <div class="feedback">FEEDBACK</div>
   <div>

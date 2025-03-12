@@ -27,7 +27,7 @@
   in small businesses at an affordable interest rate. Their friends referred
   them to other business owners and the customer base continued to increase
   until they decided to start Easyways Credit Limited company to support
-  existing customers and upscale to impact on more customers.</p>
+  existing customers and upscale to impact on more customers.</p>    
   <p> ECL envisions
   itself as an enabler and a lender that supports Kenyans in small enterprises
   to find capital for business and a platform that markets them and their
@@ -96,7 +96,7 @@
       
     }
     .products {
-      display: flx;
+      display: flex;
       flex-direction: column;
       padding: 0px 23px;
       padding-bottom: 80px;

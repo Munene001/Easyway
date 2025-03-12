@@ -5,6 +5,11 @@
   import { onMount } from "svelte";
   import Icon from "@iconify/svelte";
   import { goto } from "$app/navigation";
+  import Services from "$lib/services.svelte";
+  import Right from "$lib/right.svelte";
+  
+ 
+  import Contactform from "$lib/contactform.svelte";
   
 
   /**
@@ -63,8 +68,8 @@
 <Headerlite />
 <Frame
   title="News"
-  description="Blog Posts to keep you enlightened"
-  image="/contactphone.jpg"
+  description="Stay informed and empowered with our latest insights on loan options and smart borrowing strategies."
+  image="/news1.jpg"
 />
 <div class=" News">
   <div class="left">
@@ -95,7 +100,14 @@
       {/each}
     {/if}
   </div>
-  <div class="right"></div>
+  <div class="right">
+    <div class="righttitle">Tips on securing a loan</div>
+    <Right/>
+    <Right title = "Borrow what You can repay" point1 = "Assess Your Income – Ensure you can handle monthly repayments without financial strain." point2 = "Avoid Overborrowing – Borrow only what’s necessary to prevent excessive debt." point3 = "Have a Repayment Plan – Set up a strategy to pay on time and avoid late fees."/>
+    <Right title = "Work with a trusted Lender" point1 = "Check Credibility – Research the lender’s reputation, reviews, and legitimacy" point2 = " Avoid Hidden Fees – Ensure transparency in loan agreements with no surprise charges." point3 = "Seek Customer Support – Choose a lender that offers guidance and answers your questions."/>
+  
+  </div>
+  
 </div>
 <Footer />
 
@@ -116,6 +128,14 @@
   }
   .right {
     flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  .righttitle{
+    align-self: center;
   }
   .newscard {
     background-color: white;
@@ -161,4 +181,8 @@
     border: none;
     font-weight: 700;
   }
+  
+  
+
+  
 </style>
