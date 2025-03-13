@@ -156,10 +156,7 @@
         font-weight: 400;
     }
     @media (max-width: 768px) {
-        .About{
         
-            margin-top: 70px;
-        }
         .abouttop, .aboutbottom {
             width: 100%;
             display: flex;

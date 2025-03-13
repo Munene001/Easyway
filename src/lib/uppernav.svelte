@@ -6,7 +6,7 @@
   
     const links = [
       { label: "HOME", url: "/" },
-      { label: "ABOUT", url: "/#about-section" },
+      { label: "ABOUT", url: "/about" },
       { label: "HISTORY", url: "/history" },
       { label: "CAREERS", url: "/careers" },
       { label: "SERVICES", url: "/#service-section" },

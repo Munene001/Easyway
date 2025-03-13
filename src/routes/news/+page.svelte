@@ -7,10 +7,8 @@
   import { goto } from "$app/navigation";
   import Services from "$lib/services.svelte";
   import Right from "$lib/right.svelte";
-  
- 
+
   import Contactform from "$lib/contactform.svelte";
-  
 
   /**
    * @type {string | any[]}
@@ -19,12 +17,10 @@
   let error = "";
   let loading = true;
 
-  
-
   /**
    * @param {any} id
    */
-   function openBlogpage(id) {
+  function openBlogpage(id) {
     if (!id) {
       console.error("news id is missing");
       return;
@@ -80,7 +76,7 @@
     {:else if news.length === 0}
       <div class="loading">No Blog Posts Available!</div>
     {:else}
-      <div class="minititle">BLOGS</div>
+    
       {#each news as news}
         <div class=" newscard">
           <div class="newstitle">{news.title}</div>
@@ -95,19 +91,33 @@
             </div>
           </div>
           <div class="paragraph"><p>{news.snippet}</p></div>
-          <button class="Read" onclick={() => openBlogpage(news.id)}>Read More</button>
+          <button class="Read" onclick={() => openBlogpage(news.id)}
+            >Read More</button
+          >
         </div>
       {/each}
     {/if}
   </div>
   <div class="right">
     <div class="righttitle">Tips on securing a loan</div>
-    <Right/>
-    <Right title = "Borrow what You can repay" point1 = "Assess Your Income – Ensure you can handle monthly repayments without financial strain." point2 = "Avoid Overborrowing – Borrow only what’s necessary to prevent excessive debt." point3 = "Have a Repayment Plan – Set up a strategy to pay on time and avoid late fees."/>
-    <Right title = "Work with a trusted Lender" point1 = "Check Credibility – Research the lender’s reputation, reviews, and legitimacy" point2 = " Avoid Hidden Fees – Ensure transparency in loan agreements with no surprise charges." point3 = "Seek Customer Support – Choose a lender that offers guidance and answers your questions."/>
-  
+   
+
+    <Right />
+    <Right
+      icon="lineicons:amazon-pay"
+      title="Borrow what You can repay"
+      point1="Assess Your Income – Ensure you can handle monthly repayments without financial strain."
+      point2="Avoid Overborrowing – Borrow only what’s necessary to prevent excessive debt."
+      point3="Have a Repayment Plan – Set up a strategy to pay on time and avoid late fees."
+    />
+    <Right
+      icon="simple-icons:trustpilot"
+      title="Work with a trusted Lender"
+      point1="Check Credibility – Research the lender’s reputation, reviews, and legitimacy"
+      point2=" Avoid Hidden Fees – Ensure transparency in loan agreements with no surprise charges."
+      point3="Seek Customer Support – Choose a lender that offers guidance and answers your questions."
+    />
   </div>
-  
 </div>
 <Footer />
 
@@ -123,7 +133,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 5px 30px;
+    padding: 45px 30px;
     box-sizing: border-box;
   }
   .right {
@@ -131,11 +141,14 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 40px 20px;
+    padding: 30px 20px;
     box-sizing: border-box;
   }
-  .righttitle{
+  .righttitle {
     align-self: center;
+    font-size: 29px;
+    line-height: 30px;
+    color:rgb(75, 80, 145);
   }
   .newscard {
     background-color: white;
@@ -181,8 +194,22 @@
     border: none;
     font-weight: 700;
   }
-  
-  
-
-  
+  @media (max-width: 768px) {
+    .right {
+      display: none;
+    }
+    .left {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+      padding: 30px 0px;
+    
+    }
+    .newscard {
+      display: flex;
+      justify-self: center;
+      
+      
+    }
+  }
 </style>

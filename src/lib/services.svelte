@@ -26,15 +26,17 @@
         .service{
             
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             font-family: "Open Sans", sans-serif;
-            margin-right: 12px;
+            padding: 25px 25px;
+            background-color: white;
+            gap: 10px;
             
         }
         .service-left{
             width: 72px;
             height: 70px;
-            margin-right: 15px;
+            align-self: center;
            
         }
         .service-left img{
@@ -45,12 +47,15 @@
         .service-right{
             display: flex;
             flex-direction: column;
+            gap: 12px;
         }
         .title{
             font-size: 21px;
             font-weight: 600;
             line-height: 37.1px;
             color: rgb(24, 39, 248);
+            text-align: center;
+            
 
         }
         .description{
@@ -58,6 +63,7 @@
             font-weight: 400;
             line-height: 27.2px;
             color: rgb(122, 122, 122);
+            text-align: center;
 
         }
         .turnaround{
@@ -66,12 +72,13 @@
             font-weight: 400;
             line-height: 27.2px;
             color: black;
-            margin-top: 10px;
+            align-self: center;
 
         }
         .divapply{
             display: flex;
-            margin-top: 15px;
+            
+            align-self: center;
         }
         .Apply{
             border-radius: 90px;
@@ -92,8 +99,7 @@
         }
         @media (max-width:768px){
             .service{
-                display: flex;
-                gap: 20px;
+                gap: 35px;
                 
               
             }
@@ -105,6 +111,9 @@
             .title{
                 margin-bottom: 20px;
                 font-size: 40px;
+            }
+            .turnaround{
+                text-align: center;
             }
         
             

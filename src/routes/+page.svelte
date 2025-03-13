@@ -12,7 +12,7 @@
 
 <Header />
 <div class="prodtitle" id="service-section">Our Products</div>
-<div class="products" >
+<div class="products">
   <Services Turnaround=" Under 6 hours" />
   <Services
     src="/car-loan.png"
@@ -28,13 +28,20 @@
     Turnaround=" Under 6 Hours"
   />
   <Services
+  src = "/asset-management.png"
+    title="Asset Finance Loans"
+    description="Tailored financing for the acquisition of
+productive assets, enabling businesses and individuals to enhance productivity."
+  />
+  <Services
     src="/stock-investment.png"
     title="Other Services"
     description="We have working capital and asset finance that support all types of businesses."
   />
+ 
 </div>
 
-<About/>
+<About />
 <Stats />
 <div class="holdertitle">Our Core Values</div>
 <div class="holder">
@@ -75,15 +82,17 @@
     description="We have active communication channels used to share information amongst our clients and stake holders on important matters both internally and externally."
   />
 </div>
-<Footer/>
+<Footer />
 
 <style>
   .products {
     width: 100%;
-    padding: 70px 15px;
-    display: flex;
-    flex-direction: row;
+    padding: 40px 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
     box-sizing: border-box;
+    background-color: rgb(247, 247, 247);
   }
   .prodtitle {
     font-size: 44px;
@@ -92,10 +101,11 @@
     font-family: "Open Sans", sans-serif;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
-    color: rgb(122, 122, 122);
-    
-  }.holdertitle{
+    padding-top: 20px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+  }
+  .holdertitle {
     width: 100%;
     text-align: center;
     background-color: rgb(231, 224, 224);
@@ -103,7 +113,7 @@
     font-size: 35px;
     font-weight: 600;
     line-height: 45.8px;
-    color:  rgb(69, 82, 226);
+    color: rgb(69, 82, 226);
     font-family: "Open Sans", sans-serif;
   }
   .holder {
@@ -111,37 +121,38 @@
     background-color: rgb(231, 224, 224);
     padding: 30px 20px;
     box-sizing: border-box;
-    
+
     display: flex;
     flex-direction: column;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4vw;
+    gap: 2vw;
   }
 
   @media (max-width: 768px) {
     .products {
-      display: flx;
-      flex-direction: column;
-      padding: 15px 23px;
-      gap: 60px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0px 23px;
+
+      padding-bottom: 40px;
+      gap: 49px;
     }
     .prodtitle {
-      color: rgb(122, 122, 122);
+      color: black;
       margin-top: 3px;
-      font-size: 22px;
+      font-size: 25px;
     }
-    .holdertitle{
-        font-size: 25px;
-        line-height: 35px;
-        color:  rgb(17, 20, 54);
-        padding-top: 50px;
-
+    .holdertitle {
+      font-size: 25px;
+      line-height: 35px;
+      color: rgb(17, 20, 54);
+      padding-top: 50px;
     }
-    .holder{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-
+    .holder {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
     }
   }
 </style>

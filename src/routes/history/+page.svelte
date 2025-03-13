@@ -52,6 +52,12 @@
     Turnaround=" Under 6 Hours"
   />
   <Services
+  src = "/asset-management.png"
+    title="Asset Finance Loans"
+    description="Tailored financing for the acquisition of
+productive assets, enabling businesses and individuals to enhance productivity."
+  />
+  <Services
     src="/stock-investment.png"
     title="Other Services"
     description="We have working capital and asset finance that support all types of businesses."
@@ -73,10 +79,14 @@
   .products {
     width: 100%;
     padding: 40px 15px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
     box-sizing: border-box;
+    background-color: rgb(247, 247, 247);
   }
+    
+  
   .prodtitle {
     font-size: 44px;
     font-weight: 600;
@@ -84,8 +94,9 @@
     font-family: "Open Sans", sans-serif;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
-    color: rgb(122, 122, 122);
+    padding-top: 20px;
+    color: black;
+    background-color: rgb(247, 247, 247);
     
   }
   @media(max-width:768px){
@@ -96,17 +107,18 @@
       
     }
     .products {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
       padding: 0px 23px;
-      padding-bottom: 80px;
-      padding-top: 10px;
-      gap: 70px;
+
+      padding-bottom: 40px;
+      gap: 49px;
+     
     }
     .prodtitle {
-      color: rgb(122, 122, 122);
-      margin-top: 0px;
-      font-size: 22px;
+      color: black;
+      margin-top: 3px;
+      font-size: 25px;
     }
   }
 </style>

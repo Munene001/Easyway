@@ -4,7 +4,7 @@
 <div class="pageroute">
   <div class="routeitem"><a href="/" aria-label="Go to home"> HOME </a></div>
   <div class="routeitem">
-    <a href="/#about-section" aria-label="Go to shop"> ABOUT </a>
+    <a href="/about" aria-label="Go to shop"> ABOUT </a>
   </div>
   <div class="routeitem">
     <a href="/history" aria-label="Go to history"> HISTORY </a>

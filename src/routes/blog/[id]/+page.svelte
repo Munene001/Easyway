@@ -4,6 +4,7 @@
   import Newspost from "$lib/newspost.svelte";
   import Footer from "$lib/footer.svelte";
   import Blogframe from "$lib/blogframe.svelte";
+  import Headerlite from "$lib/headerlite.svelte";
 
   export let data;
 
@@ -26,6 +27,7 @@
     goto("/news"); // Adjust the route if your news list page is at a different path
   }
 </script>
+<Headerlite/>
 
 <Blogframe title="Blog" description={newsItem.title} image="/news3.jpg" date = {newsItem.date} author = {newsItem.author}/>
 <div class="blog-page">
