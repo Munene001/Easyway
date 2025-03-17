@@ -3,10 +3,12 @@
   import Headerlite from "$lib/headerlite.svelte";
   import Blackandblue from "$lib/blackand blue.svelte";
   import Icon from "@iconify/svelte";
+  import Team from "$lib/team.svelte";
+  import Footer from "$lib/footer.svelte";
 </script>
 
 <Headerlite />
-<Frame title="About Us" image="/crew3.webp" />
+<Frame title="About Us" image="/crew3.webp"  description = "Learn more about our company's team, goals and impact on society"/>
 <div class="first">
   <div class="actitle">
     <div>Know what we are about and what we represent</div>
@@ -27,10 +29,12 @@
 </div>
 
 <Blackandblue />
+<Team/>
+<Footer/>
 
 <style>
   .first {
-    background-color: rgb(224, 222, 222);
+    background-color:white;
     display: flex;
     flex-direction: row;
     font-family: "Open Sans", sans-serif;

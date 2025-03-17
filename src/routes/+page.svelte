@@ -19,6 +19,7 @@
     title="Logbook Loans"
     description="Logbook loan also known as logbook lending, are secured loans using your vehicle’s logbook."
     Turnaround=" Within 24 hours"
+    page = "/logbookloan"
   />
   <Services
     src="/salary.png"
@@ -26,17 +27,21 @@
     description="A Salary Advance is a short-term loan advanced to a salaried customer depending on the bank’s profile of them, to help them meet their emergency need.
     "
     Turnaround=" Under 6 Hours"
+    page = "/salaryloan"
   />
   <Services
   src = "/asset-management.png"
     title="Asset Finance Loans"
     description="Tailored financing for the acquisition of
 productive assets, enabling businesses and individuals to enhance productivity."
+page = "/assetfinanceloan"
   />
+  
   <Services
     src="/stock-investment.png"
     title="Other Services"
     description="We have working capital and asset finance that support all types of businesses."
+    
   />
  
 </div>

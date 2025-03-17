@@ -5,6 +5,7 @@
     export let title = "Business loans";
     export let description = "Business loan is a business credit facility that allows a business to borrow against its future sales.";
     export let Turnaround = "";
+    export let page = "/businessloan"
     
     
     </script>
@@ -16,7 +17,7 @@
             {#if Turnaround}
             <div class="turnaround"> Turn around Time:{Turnaround}</div>
             {/if}
-            <div class="divapply"><button class=" Apply"><a href="/contact">Apply Now</a></button></div>
+            <div class="divapply"><button class=" Apply"><a href="/contact">Apply Now</a></button><button class="moredetails"><a href={page} aria-label="page">More details</a></button></div>
         </div>
         
     </div>
@@ -77,16 +78,39 @@
         }
         .divapply{
             display: flex;
-            
             align-self: center;
+            gap: 20px;
+            margin-top: 10px;
+            
+            
         }
         .Apply{
-            border-radius: 90px;
+            
             font-size: 15px;
             padding: 10px;
             background-color: blue;
             border: none;
+            border-radius: 85px;
             
+        }
+        .moredetails{
+            
+            font-size: 15px;
+            padding: 10px;  
+            border: 1px solid blue;
+            background-color: white;
+            border-radius: 85px;
+
+        }
+        .moredetails a{
+            border-radius: 5px;
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+
+        }
+        .moredetails:hover{
+            background-color: gray;
         }
         .Apply a{
             color: white;

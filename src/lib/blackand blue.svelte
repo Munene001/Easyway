@@ -207,12 +207,7 @@
       text-align: center;
       padding-bottom: 30px;
     }
-    .vision {
-      margin-bottom: 40px;
-    }
-    .visionup {
-      margin-right: 0px;
-    }
+   
 
     .abuno img {
       height: 300px;
