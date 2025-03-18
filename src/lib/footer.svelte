@@ -41,7 +41,7 @@
     <div class="links">
       <div class="linkstitle">Useful links</div>
       <div class="linkitems">
-        <div class="linkitem"><a href="/dashboard">Dashboard</a></div>
+        <div class="linkitem"><a href="/login">Dashboard</a></div>
         <div class="linkitem"><a href="/careers">Career</a></div>
         <div class="linkitem"><a href="/news">Branches</a></div>
         <div class="linkitem"><a href="/history">History</a></div>

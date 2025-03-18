@@ -8,8 +8,8 @@
       { label: "HOME", url: "/" },
       { label: "ABOUT", url: "/about" },
       { label: "HISTORY", url: "/history" },
-      { label: "CAREERS", url: "/careers" },
       { label: "SERVICES", url: "/#service-section" },
+      { label: "CAREERS", url: "/careers" },
       { label: "NEWS", url: "/news" },
       { label: "CONTACT", url: "/contact" },
     ];
@@ -46,7 +46,7 @@
         <div class="itemlast">Customers</div>
       </div>
       <div class="item">
-        <button class="quote"><a href="/contact">GET A QUOTE</a></button>
+        <button class="quote"><a href="/contact">CLIENT PORTAL</a></button>
       </div>
     </div>
     <div class="navpage">

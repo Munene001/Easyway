@@ -10,11 +10,12 @@
     <a href="/history" aria-label="Go to history"> HISTORY </a>
   </div>
   <div class="routeitem">
-    <a href="/careers" aria-label="Go to career"> CAREERS </a>
-  </div>
-  <div class="routeitem">
     <a href="/#service-section" aria-label="Go to services"> SERVICES </a>
   </div>
+  <div class="routeitem">
+    <a href="/careers" aria-label="Go to career"> CAREERS </a>
+  </div>
+  
   <div class="routeitem">
     <a href="/news" aria-label="Go to news"> NEWS </a>
   </div>

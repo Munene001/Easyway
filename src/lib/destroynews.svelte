@@ -95,6 +95,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    border-bottom : 40px solid rgb(18, 34, 68);
   }
   .minititle {
     display: flex;

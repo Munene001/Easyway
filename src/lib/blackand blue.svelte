@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <div class="abuno"><img src="./sky2.jpg" alt="sky2" /></div>
+    <div class="abuno"><img src="./office.jpg" alt="office" /></div>
   </div>
   <div class="aboutbottom">
     <div class="abdos">

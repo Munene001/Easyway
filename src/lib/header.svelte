@@ -11,7 +11,7 @@
       description: "We are a Nairobi-based microfinance offering loans like logbook and salary advances for businesses.",
       buttons: [
         { text: "Contact us", link: "/contact" },
-        { text: "Learn More", link: "/sky-page" },
+        { text: "Client Portal", link: "/sky-page" },
       ],
     },
     {

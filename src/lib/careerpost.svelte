@@ -58,7 +58,7 @@
   }
 </script>
 
-<div class="careerpost">
+<div class="careerpost" id = "career">
   <div class="title">POST JOB</div>
   <form onsubmit={handleSubmit}>
     <div>

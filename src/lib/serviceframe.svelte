@@ -3,7 +3,7 @@
   import Uppernav from "$lib/uppernav.svelte";
 
   // Props to make it reusable
-  export let image = "/crew.webp";
+  export let image = "/crew3.webp";
   export let title = "Contact Us";
   export let description = "Get in touch";
 </script>

@@ -108,6 +108,14 @@
       <input
         type="radio"
         name="loan_type"
+        value="asset finance loan"
+        bind:group={loan_type}
+      />Asset Finance Loan
+    </label>
+    <label>
+      <input
+        type="radio"
+        name="loan_type"
         value="other services"
         bind:group={loan_type}
       />Other Services
@@ -129,7 +137,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 720px;
+    width: 770px;
   }
   input[type="text"]:-webkit-autofill,
   input[type="tel"]:-webkit-autofill,

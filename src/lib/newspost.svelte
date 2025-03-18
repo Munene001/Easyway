@@ -56,7 +56,7 @@
   }
 </script>
 
-<div class="Newspost">
+<div class="Newspost" id = "news">
   <div class="PostNews">POST NEWS</div>
   <form onsubmit={handleSubmit}>
     <div>
