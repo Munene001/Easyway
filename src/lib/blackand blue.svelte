@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <div class="abuno"><img src="./office.jpg" alt="office" /></div>
+    <div class="abuno"><img src="./optimized/office.webp" alt="office" /></div>
   </div>
   <div class="aboutbottom">
     <div class="abdos">

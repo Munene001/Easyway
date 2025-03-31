@@ -1,19 +1,52 @@
 <script>
   import { goto } from "$app/navigation";
-  import Frame from "$lib/frame.svelte";
-  import Newspost from "$lib/newspost.svelte";
+  import { page } from "$app/stores";
   import Footer from "$lib/footer.svelte";
   import Blogframe from "$lib/blogframe.svelte";
   import Headerlite from "$lib/headerlite.svelte";
 
-  export let data;
+  // Add this export to disable SSR for this page
+  
 
-  let newsItem = data.newsItem;
-  let error = data.error || "";
+  let newsItem = null;
+  let error = null;
+  let isLoading = true;
 
-  /**
-   * @param {string | number | Date} timestamp
-   */
+  async function loadNewsItem(id) {
+    try {
+      isLoading = true;
+      const API_URL = `https://easywayscredit.co.ke/api/api/news/${id}`;
+      const response = await fetch(API_URL, {
+        method: "GET",
+        headers: { Accept: "application/json" },
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Failed to fetch news: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      if (!data || !data.title) {
+        throw new Error('Invalid data format from API');
+      }
+      
+      newsItem = data;
+      error = null;
+    } catch (err) {
+      console.error("Error loading news:", err);
+      error = err.message || "Failed to load news item";
+      newsItem = null;
+    } finally {
+      isLoading = false;
+    }
+  }
+
+  $: {
+    if ($page.params.id) {
+      loadNewsItem($page.params.id);
+    }
+  }
+
   function formatDate(timestamp) {
     return new Date(timestamp).toLocaleDateString("en-US", {
       year: "numeric",
@@ -22,58 +55,65 @@
     });
   }
 
-  // Navigation back to the news list page
   function goBackToNews() {
-    goto("/news"); // Adjust the route if your news list page is at a different path
+    goto("/news");
   }
 </script>
-<Headerlite/>
 
-<Blogframe title="Blog" description={newsItem.title} image="/news3.jpg" date = {newsItem.date} author = {newsItem.author}/>
-<div class="blog-page">
-  {#if error}
+<Headerlite />
+
+{#if isLoading}
+  <div class="blog-page">
+    <div class="not-found">Loading...</div>
+  </div>
+{:else if error}
+  <div class="blog-page">
     <div class="error">{error}</div>
-  {:else if newsItem}
+    <button class="back-button" on:click={goBackToNews}>Back to News</button>
+  </div>
+{:else if newsItem}
+  <Blogframe
+    title="Blog"
+    description={newsItem.title}
+    image="/optimized/news3.webp"
+    date={formatDate(newsItem.date)}
+    author={newsItem.author}
+  />
+
+  <div class="blog-page">
     <h1>{newsItem.title}</h1>
     <div class="meta">
       <span>{formatDate(newsItem.date)}</span> | <span>{newsItem.author}</span>
     </div>
     <div class="content">
       <p>{newsItem.content}</p>
-      <!-- Assuming "content" field exists -->
     </div>
     <button class="back-button" on:click={goBackToNews}>Back to News</button>
-  {:else}
-    <div class="not-found">News not found</div>
-  {/if}
-</div>
-<Footer/>
+  </div>
+{/if}
+
+<Footer />
 
 <style>
-  .blog-page{
+  .blog-page {
     padding: 30px 200px;
     font-family: "Open Sans", sans-serif;
     font-size: 17px;
     line-height: 30px;
-    
   }
-  .blog-page h1{
-    color:rgb(55, 64, 176);
-   
+  .blog-page h1 {
+    color: rgb(55, 64, 176);
   }
-  .meta{
+  .meta {
     color: rgb(75, 80, 145);
-    
   }
   .content p {
     white-space: pre-wrap;
-     /* Preserves newlines and spaces */
   }
-  @media(max-width:768px){
-    .blog-page{
-      padding:10px 32px;
+  @media (max-width: 768px) {
+    .blog-page {
+      padding: 10px 32px;
       display: block;
     }
-
   }
 </style>

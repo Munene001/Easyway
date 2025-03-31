@@ -30,9 +30,9 @@
         const numberElements = document.querySelectorAll<HTMLElement>('.numbers > div > div:first-child');
         const targets = [
             { value: 3, suffix: '' },
-            { value: 40, suffix: 'M+' },
-            { value: 8, suffix: 'M+' },
-            { value: 137, suffix: '+' }
+            { value: 75, suffix: 'M+' },
+            { value: 10, suffix: 'M+' },
+            { value: 1500, suffix: '+' }
         ];
 
         numberElements.forEach((element, index) => {

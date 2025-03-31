@@ -5,6 +5,8 @@
   import { onMount } from "svelte";
   import Icon from "@iconify/svelte";
 
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+
   /**
    * @type {string | any[]}
    */
@@ -14,7 +16,7 @@
 
   async function fetchCareers() {
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/careers", {
+      const response = await fetch(`https://easywayscredit.co.ke/api/api/careers`, {
         method: "GET",
         headers: { Accept: "application/json" },
       });
@@ -57,7 +59,7 @@
 <Headerlite />
 <Frame
   title="Careers"
-  image="/careermiss.jpg"
+  image="/optimized/careermiss.webp"
   description="Join Easyway and be part of a team driven by innovation, growth, and excellence."
 />
 <div class="career">

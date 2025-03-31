@@ -6,23 +6,25 @@
   import Stats from "$lib/stats.svelte";
   import Values from "$lib/values.svelte";
   import Footer from "$lib/footer.svelte";
+  import Video from "$lib/video.svelte";
 </script>
 
 <Headerlite />
 
 <Header />
+<Video/>
 <div class="prodtitle" id="service-section">Our Products</div>
 <div class="products">
   <Services Turnaround=" Under 6 hours" />
   <Services
-    src="/car-loan.png"
+    src="/optimized/car-loan.webp"
     title="Logbook Loans"
     description="Logbook loan also known as logbook lending, are secured loans using your vehicle’s logbook."
     Turnaround=" Within 24 hours"
     page = "/logbookloan"
   />
   <Services
-    src="/salary.png"
+    src="optimized/salary.webp"
     title="Salary Loans"
     description="A Salary Advance is a short-term loan advanced to a salaried customer depending on the bank’s profile of them, to help them meet their emergency need.
     "
@@ -30,7 +32,7 @@
     page = "/salaryloan"
   />
   <Services
-  src = "/asset-management.png"
+  src = "/optimized/asset-management.webp"
     title="Asset Finance Loans"
     description="Tailored financing for the acquisition of
 productive assets, enabling businesses and individuals to enhance productivity."
@@ -38,7 +40,7 @@ page = "/assetfinanceloan"
   />
   
   <Services
-    src="/stock-investment.png"
+    src="/optimized/stock-investment.webp"
     title="Other Services"
     description="We have working capital and asset finance that support all types of businesses."
     

@@ -1,7 +1,7 @@
 <script>
   import { goto } from "$app/navigation";
 
-    export let src = "/business.png";
+    export let src = "/optimized/business.webp";
     export let title = "Business loans";
     export let description = "Business loan is a business credit facility that allows a business to borrow against its future sales.";
     export let Turnaround = "";

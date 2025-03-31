@@ -31,7 +31,7 @@
 
   async function fetchNews() {
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/news", {
+      const response = await fetch(`https://easywayscredit.co.ke/api/api/news`, {
         method: "GET",
         headers: { Accept: "application/json" },
       });
@@ -65,7 +65,7 @@
 <Frame
   title="News"
   description="Stay informed and empowered with our latest insights on loan options and smart borrowing strategies."
-  image="/news1.jpg"
+  image="/optimized/news1.webp"
 />
 <div class=" News">
   <div class="left">

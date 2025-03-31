@@ -11,7 +11,7 @@
 
   async function fetchNews() {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/news`, {
+      const response = await fetch(`https://easywayscredit.co.ke/api/api/news`, {
         method: "GET",
         headers: { Accept: "application/json" },
       });
@@ -32,7 +32,7 @@
    */
   async function deleteNews(id) {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/news/${id}`, {
+      const response = await fetch(`https://easywayscredit.co.ke/api/api/news/${id}`, {
         method: "DELETE",
         headers: { Accept: "application/json" },
       });

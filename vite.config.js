@@ -6,4 +6,5 @@ export default defineConfig({
 	optimizeDeps: {
 		exclude: ['chunk-PYOSYM4M'], // Add the problematic dependency here
 	  },
+	  
 });

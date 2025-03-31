@@ -1,12 +1,14 @@
 import { applyAction } from "$app/forms";
 import { json } from "@sveltejs/kit";
 
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+
 /**
  * @param {any} formData
  */
 export async function submitOrder(formData){
     try{
-        const response = await fetch('http://127.0.0.1:8000/api/accounts', {
+        const response = await fetch('https://easywayscredit.co.ke/api/api/accounts', {
             method: 'POST',
             headers: {
                 'Content-Type':'application/json',
@@ -30,7 +32,7 @@ export async function submitOrder(formData){
  */
 export async function submitCareer(careerData){
     try {
-        const response = await fetch('http://127.0.0.1:8000/api/careers',{
+        const response = await fetch('https://easywayscredit.co.ke/api/api/careers',{
             method: 'POST',
             headers: {
                 'Content-type':'appliction/json',
@@ -56,7 +58,7 @@ export async function submitCareer(careerData){
  */
 export async function submitNews(newsData){
     try {
-        const response = await fetch('http://127.0.0.1:8000/api/news',{
+        const response = await fetch('https://easywayscredit.co.ke/api/api/news',{
             method: 'POST',
             headers: {
                 'Content-type':'appliction/json',

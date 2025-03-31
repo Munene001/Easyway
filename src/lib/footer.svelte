@@ -56,7 +56,7 @@
           <input type="Text" placeholder="Fullname" />
           <input type="Email" placeholder="Email" />
           <textarea placeholder="Message" rows="5" cols="12"></textarea>
-          <button type="submit">Submit Now</button>
+          <button type="submit"><a href="/contact">Submit Now</a></button>
         </form>
       </div>
     </div>

@@ -9,11 +9,13 @@
     // Toggle password visibility
     function togglePasswordVisibility() {
         showPassword = !showPassword;
+
     }
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
     async function handleLogin() {
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/login/', {
+            const response = await fetch('https://easywayscredit.co.ke/api/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

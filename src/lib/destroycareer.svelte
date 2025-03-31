@@ -8,10 +8,12 @@
   let error = "";
   let loading = true;
   let successMessage = ""
+  
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
   async function fetchCareers() {
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/careers", {
+      const response = await fetch(`https://easywayscredit.co.ke/api/api/careers`, {
         method: "GET",
         headers: { Accept: "application/json" },
       });
@@ -32,7 +34,7 @@
    */
   async function deleteCareer(id) {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/careers/${id}`, {
+      const response = await fetch(`https://easywayscredit.co.ke/api/api/careers/${id}`, {
         method: "DELETE",
         headers: { Accept: "application/json" },
       });

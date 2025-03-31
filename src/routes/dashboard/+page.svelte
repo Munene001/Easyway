@@ -7,16 +7,18 @@ import Careerpost from "$lib/careerpost.svelte";
 import Destroycareer from "$lib/destroycareer.svelte";
 import Newspost from "$lib/newspost.svelte";
 import Destroynews from "$lib/destroynews.svelte";
+import {goto} from '$app/navigation';
 
 /**
  * @type {string | any[]}
  */
 let accounts = [];
 let error = "";
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
 async function fetchAccounts() {
     try {
-        const response = await fetch("http://127.0.0.1:8000/api/accounts", {
+        const response = await fetch(`https://easywayscredit.co.ke/api/api/accounts`, {
             method: "GET",
             headers: {
                 Accept: "application/json"
@@ -30,23 +32,24 @@ async function fetchAccounts() {
         console.log("network issue");
     }
 }
-onMount(async () => {
-        const response = await fetch('http://127.0.0.1:8000/api/check-auth', {
+fetchAccounts();
+/*onMount(async () => {
+        const response = await fetch('https://easywayscredit.co.ke/api/api/check-auth', {
             credentials: 'include'
         });
-        if (!resposnse.ok) {
+        if (!response.ok) {
             goto('/login')
         }
     });
     onMount(fetchAccounts)
 
 async function handleLogout() {
-    await fetch('http://127.0.0.1:8000/api/logout', {
+    await fetch('https://easywayscredit.co.ke/api/api/logout', {
         method: 'GET',
         credentials: 'include'
     });
     goto('/login');
-}
+}*/
 </script>
 
 <div class="dashboard">
@@ -68,7 +71,7 @@ async function handleLogout() {
                 <div>
                     <button class="download"
                         ><a
-                            href="http://127.0.0.1:8000/api/accounts/download-csv"
+                            href="https://easywayscredit.co.ke/api/api/accounts/download-csv"
                             download="feedback.csv">Download as CSV</a
                             ></button
                             >

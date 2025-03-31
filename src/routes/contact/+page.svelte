@@ -8,7 +8,7 @@
   
 </script>
 <Headerlite/>
-<Frame image = "contactvin.jpg" description = "Reach out to Easyways Credit to receive your personal or financial solutions"/>
+<Frame image = "/optimized/contactvin.webp" description = "Reach out to Easyways Credit to receive your personal or financial solutions"/>
 <Reachus/>
 
 <Footer/>
