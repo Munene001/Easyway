@@ -8,10 +8,19 @@
   // Add this export to disable SSR for this page
   
 
+  /**
+   * @type {{ title: any; date: any; author: any; content: any; } | null}
+   */
   let newsItem = null;
+  /**
+   * @type {null}
+   */
   let error = null;
   let isLoading = true;
 
+  /**
+   * @param {string} id
+   */
   async function loadNewsItem(id) {
     try {
       isLoading = true;
@@ -34,7 +43,6 @@
       error = null;
     } catch (err) {
       console.error("Error loading news:", err);
-      error = err.message || "Failed to load news item";
       newsItem = null;
     } finally {
       isLoading = false;
@@ -47,6 +55,9 @@
     }
   }
 
+  /**
+   * @param {string | number | Date} timestamp
+   */
   function formatDate(timestamp) {
     return new Date(timestamp).toLocaleDateString("en-US", {
       year: "numeric",
@@ -58,9 +69,28 @@
   function goBackToNews() {
     goto("/news");
   }
+  function sharePost(){
+    const url = window.location.href;
+    const title = newsItem?.title || "Check out this blog post!";
+    const text = `BLOG: ${title}`;
+    
+    
+
+    if(navigator.share){
+      navigator
+      .share({title,text,url})
+      .then(() =>console.log(`Post shared!`))
+      .catch((err) => console.error("Share failed:", err));
+    } else{
+      navigator.clipboard.writeText(url);
+      alert("Link copied to clipboard, Paste the link to share");
+    }
+
+  }
 </script>
 
 <Headerlite />
+
 
 {#if isLoading}
   <div class="blog-page">
@@ -81,14 +111,18 @@
   />
 
   <div class="blog-page">
+    <button class="back-button" on:click={sharePost}>📤 Share This Post</button>
     <h1>{newsItem.title}</h1>
+    
     <div class="meta">
       <span>{formatDate(newsItem.date)}</span> | <span>{newsItem.author}</span>
+     
     </div>
     <div class="content">
       <p>{newsItem.content}</p>
     </div>
     <button class="back-button" on:click={goBackToNews}>Back to News</button>
+ 
   </div>
 {/if}
 
@@ -106,6 +140,8 @@
   }
   .meta {
     color: rgb(75, 80, 145);
+    display: flex;
+    flex-direction: row;
   }
   .content p {
     white-space: pre-wrap;

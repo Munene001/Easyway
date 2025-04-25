@@ -42,7 +42,7 @@
         <div class="itemlast">Behind Garden City Mall</div>
       </div>
       <div class="item">
-        <div class="itemfirst">Trusted by 137+ </div>
+        <div class="itemfirst">Trusted by 1500+ </div>
         <div class="itemlast">Customers</div>
       </div>
       <div class="item">

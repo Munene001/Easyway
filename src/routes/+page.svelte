@@ -6,13 +6,12 @@
   import Stats from "$lib/stats.svelte";
   import Values from "$lib/values.svelte";
   import Footer from "$lib/footer.svelte";
-  import Video from "$lib/video.svelte";
+ 
 </script>
 
 <Headerlite />
 
 <Header />
-<Video/>
 <div class="prodtitle" id="service-section">Our Products</div>
 <div class="products">
   <Services Turnaround=" Under 6 hours" />

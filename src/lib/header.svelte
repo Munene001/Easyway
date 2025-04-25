@@ -7,7 +7,7 @@
   let slides = [
     {
       image: "/optimized/nai2.webp_q50.webp",
-      title: "Easyway Credit",
+      title: "Easyways Credit",
       description: "We are a Nairobi-based microfinance offering loans like logbook and salary advances for businesses.",
       buttons: [
         { text: "Contact us", link: "/contact" },
