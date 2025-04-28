@@ -57,14 +57,18 @@ export async function submitCareer(careerData){
  * @param {any} newsData
  */
 export async function submitNews(newsData){
+    const formData = new FormData();
+    formData.append('title', newsData.title);
+    formData.append('snippet', newsData.snippet);
+    formData.append('content', newsData.content);
+    formData.append('author', newsData.author);
+    if (newsData.image) formData.append('image', newsData.image);
+
     try {
         const response = await fetch('https://easywayscredit.co.ke/api/api/news',{
             method: 'POST',
-            headers: {
-                'Content-type':'appliction/json',
-                'Accept':'application/json',
-            },
-            body: JSON.stringify(newsData)
+            body: formData
+          
         });
         if(response.ok){
             const result = await response.json();

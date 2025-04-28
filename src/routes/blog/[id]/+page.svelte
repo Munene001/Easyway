@@ -5,18 +5,20 @@
   import Blogframe from "$lib/blogframe.svelte";
   import Headerlite from "$lib/headerlite.svelte";
 
+ 
   // Add this export to disable SSR for this page
   
 
-  /**
-   * @type {{ title: any; date: any; author: any; content: any; } | null}
+ /**
+   * @type {{ title: string; image_url: any; date: string | number | Date; author: any; content: any; } | null}
    */
-  let newsItem = null;
+ let newsItem = null;
   /**
    * @type {null}
    */
   let error = null;
   let isLoading = true;
+  let image_url; 
 
   /**
    * @param {string} id
@@ -105,7 +107,7 @@
   <Blogframe
     title="Blog"
     description={newsItem.title}
-    image="/optimized/news3.webp"
+    image={newsItem.image_url ? `https://easywayscredit.co.ke${newsItem.image_url}` : "/optimized/news3.webp"}
     date={formatDate(newsItem.date)}
     author={newsItem.author}
   />

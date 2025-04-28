@@ -1,22 +1,26 @@
-<script>
+<script lang="ts">
   import { submitNews } from "./api.js";
 
   /**
    * @type {string}
    */
-  let title;
+  let title: string;
   /**
    * @type {string}
    */
-  let snippet;
+  let snippet: string;
   /**
    * @type {string}
    */
-  let content;
+  let content: string;
   /**
    * @type {string}
    */
-  let author;
+  let author: string;
+  /**
+   * @type {null}
+   */
+  let image: File | null = null;
   let date;
 
   let successMessage = "";
@@ -25,7 +29,7 @@
   /**
    * @param {{ preventDefault: () => void; target: any; }} event
    */
-  async function handleSubmit(event) {
+  async function handleSubmit(event: { preventDefault: () => void; target: any; }) {
     event.preventDefault();
 
     successMessage = "";
@@ -41,6 +45,7 @@
       snippet,
       content,
       author,
+      image,
     };
     const result = await submitNews(newsData);
     if (result.success) {
@@ -49,8 +54,9 @@
       snippet = "";
       content = "";
       author = "";
-    } else {
-      generalError = result.error || "Failed to submit news";
+      image = null;
+       } else {
+      generalError = result.error || "Failed to submit news : ensure image is below 250kb";
       alert(generalError);
     }
   }
@@ -74,6 +80,35 @@
         required
       />
     </div>
+    <br>
+    <div class="block-image">
+      <label for="image">Featured Image(optional)</label>
+      <input
+        type="file"
+        id="image"
+        accept="image/jpeg,image/png,image/webp"
+        onchange={(e: Event) => {
+          const target = e.target as HTMLInputElement;
+          image = null; // Reset image
+          if (target.files && target.files[0]) {
+            const file = target.files[0];
+            if (file.size > 250 * 1024) { // 250KB in bytes
+              generalError = "Image must be under 250KB";
+              target.value = ""; // Clear input
+            } else {
+              image = file;
+              generalError = "";
+            }
+          }
+        }}
+      />
+      {#if image}
+        <p>Selected: {image.name}</p>
+      {/if}
+      {#if generalError && !image}
+        <p class="error">{generalError}</p>
+      {/if}
+    </div>
     <div class="textareablock">
     <div class="block">
       <label for="snippet">Snippet:</label>
@@ -95,7 +130,9 @@
         required
       ></textarea>
     </div>
+   
     </div>
+    
     <button type="submit">Make Post</button>
     {#if successMessage}
       <p class="success">{successMessage}</p>
@@ -169,6 +206,14 @@
     gap: 5px;
 
   }
+  .block-image{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  
+
+  }
+ 
 
   .error {
     color: red;

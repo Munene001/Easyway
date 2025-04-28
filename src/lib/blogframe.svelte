@@ -60,7 +60,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-size: cover;
+      background-size: scale-down;
       background-position: center;
       animation: zoomIn 9000ms linear infinite;
       z-index: 0; /* Below the overlay for tinting */
